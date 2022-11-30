@@ -4,6 +4,7 @@ import { rpsAction } from './redux/actions/rpsAction';
 import './App.css';
 
 import Box from './components/Box';
+import { useEffect } from 'react';
 
 /* 1. 박스 2개, 타이틀, 사진 정보, 결과 값
 2. 가위 바위 보 버튼이 있다
@@ -22,11 +23,14 @@ function App() {
   const { rock, scissors, paper } = useSelector((state) => state.rps);
   const choice = [rock, scissors, paper];
 
+  useEffect(() => {
+    dispatch(rpsAction.judgement({userSelect, computerSelect}));
+  }, [userSelect, computerSelect]);
+
   const setScissors = () => {
     dispatch(rpsAction.setScissors());
 
     let computerChoice = randomChoice();
-    /* console.log(computerChoice); */
     dispatch(rpsAction.setRandom(computerChoice));
   }
 
@@ -34,15 +38,13 @@ function App() {
     dispatch(rpsAction.setRock());
 
     let computerChoice = randomChoice();
-    /* console.log(computerChoice); */
     dispatch(rpsAction.setRandom(computerChoice));
-  }
+    }
 
   const setPaper = () => {
     dispatch(rpsAction.setPaper());
 
     let computerChoice = randomChoice();
-    /* console.log(computerChoice); */
     dispatch(rpsAction.setRandom(computerChoice));
   }
 
