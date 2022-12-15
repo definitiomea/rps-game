@@ -1,33 +1,33 @@
 import { rpsActions } from "../reducers/rpsReducer";
 
-function setRock() {
+function setRockAction() {
     return (dispatch, getState) => {
         dispatch(rpsActions.setRock());
     }
 }
 
-function setScissors() {
+function setScissorsAction() {
     return (dispatch, getState) => {
         dispatch(rpsActions.setScissors());
     }
 }
 
-function setPaper() {
+function setPaperAction() {
     return (dispatch, getState) => {
         dispatch(rpsActions.setPaper());
     }
 }
 
-function setRandom(computerChoice) {
+function setRandomAction(computerChoice) {
     return (dispatch, getState) => {
         dispatch(rpsActions.setRandom(computerChoice));
     }
 }
 
-function judgement({userSelect, computerSelect}) {
+function judgementAction({userSelect, computerSelect}) {
     return (dispatch, getState) => {
         dispatch(rpsActions.judgement({userSelect, computerSelect}));
     }
 }
 
-export const rpsAction = { setRock, setScissors, setPaper, setRandom, judgement };
+export const rpsAction = { setRockAction, setScissorsAction, setPaperAction, setRandomAction, judgementAction };

@@ -24,28 +24,28 @@ function App() {
   const choice = [rock, scissors, paper];
 
   useEffect(() => {
-    dispatch(rpsAction.judgement({userSelect, computerSelect}));
+    dispatch(rpsAction.judgementAction({userSelect, computerSelect}));
   }, [userSelect, computerSelect]);
 
-  const setScissors = () => {
-    dispatch(rpsAction.setScissors());
+  const setScissorsButton = () => {
+    dispatch(rpsAction.setScissorsAction());
 
     let computerChoice = randomChoice();
-    dispatch(rpsAction.setRandom(computerChoice));
+    dispatch(rpsAction.setRandomAction(computerChoice));
   }
 
-  const setRock = () => {
-    dispatch(rpsAction.setRock());
+  const setRockButton = () => {
+    dispatch(rpsAction.setRockAction());
 
     let computerChoice = randomChoice();
-    dispatch(rpsAction.setRandom(computerChoice));
+    dispatch(rpsAction.setRandomAction(computerChoice));
     }
 
-  const setPaper = () => {
-    dispatch(rpsAction.setPaper());
+  const setPaperButton = () => {
+    dispatch(rpsAction.setPaperAction());
 
     let computerChoice = randomChoice();
-    dispatch(rpsAction.setRandom(computerChoice));
+    dispatch(rpsAction.setRandomAction(computerChoice));
   }
 
   const randomChoice = () => {
@@ -62,9 +62,9 @@ function App() {
         <Box title="Computer" computerSelect={computerSelect}></Box>
       </div>
       <div className="Main">
-        <button onClick={() => setScissors()}>가위</button>
-        <button onClick={() => setRock()}>바위</button>
-        <button onClick={() => setPaper()}>보</button>
+        <button onClick={() => setScissorsButton()}>가위</button>
+        <button onClick={() => setRockButton()}>바위</button>
+        <button onClick={() => setPaperButton()}>보</button>
       </div>
     </>
   );
