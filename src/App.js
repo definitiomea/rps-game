@@ -102,6 +102,18 @@ function App() {
     return choice[final];
   }
 
+  /* 만약 액션 함수를 쓰지 않고 바로 reducer에 접근한다고 한다면..
+
+  import { rpsActions } from './redux/reducers/rpsReducer'
+
+  const setScissorsButton = () => {
+    dispatch(rpsActions.setRock());
+    let computerChoice = randomChoice();
+    dispatch(rpsActions.setRandom(computerChoice));
+  }
+  
+  가 되지 않을까 하는데, 나중에 시험해보기 */
+
   return (
     <>
       <div className="Main">
