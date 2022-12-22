@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
+
+/* rpsAction은 객체로 되어있고, 해당 객체의 각 함수에 접근하는 개념 */
 import { rpsAction } from './redux/actions/rpsAction';
 
 import './App.css';
