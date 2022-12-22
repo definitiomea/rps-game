@@ -63,6 +63,9 @@ const rpsSlice = createSlice({
             /* state 변경과 렌더링에 차이가 생겨버려서
             한 차례 전에 선택한 결과가 화면에 출력되었던 것은 생명주기에 의한 것으로,
             useEffect Hook으로 해결할 수 있었다. */
+
+            console.log(state.rock);
+            console.log(action.payload.userSelect);
             
             if(action.payload.userSelect?.name == "Rock") {
                 if(action.payload.userSelect?.name == action.payload.computerSelect?.name) {
