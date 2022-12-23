@@ -33,6 +33,11 @@ let initialState = {
 };
 
 const rpsSlice = createSlice({
+    /* 이쪽에도 아무 name이나 줘보기
+    동작 자체에는 문제가 없다.
+    store에서 configureStore로 정의한 키 이름이 중요하다는 것을 알았다.
+
+    "abcdefghijklmn">.name: "abcdefghijklmn" */
     name: "rps",
     initialState,
     reducers: {
