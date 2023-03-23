@@ -13,3 +13,11 @@ const store = configureStore({
 });
 
 export default store;
+
+/* 슬라이스?
+
+기능에 따라 여러 스토어를 작성하고, 나중에 합쳐둘 수 있다
+
+마크다운을 편집할 도구
+
+ */
